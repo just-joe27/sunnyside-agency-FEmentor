@@ -50,9 +50,9 @@ function ContentGrid() {
 					</a>
 				</div>
 			</div>
-			<div className='bg-mobileGraphicDesign md:bg-graphicDesign bg-cover flex flex-col justify-center text-center h-600 p-6'>
+			<div className='bg-mobileGraphicDesign md:bg-graphicDesign bg-cover bg-center flex flex-col justify-center text-center h-600 p-6'>
 				<div className='max-w-lg mx-auto mt-80'>
-					<h3 className=' text-2xl md:text-3xl font-titles pb-8'>
+					<h3 className='text-2xl md:text-3xl font-titles pb-8'>
 						Graphic Design
 					</h3>
 					<p className='font-body max-w-sm text-sm'>
@@ -62,7 +62,7 @@ function ContentGrid() {
 					</p>
 				</div>
 			</div>
-			<div className='bg-mobilePhotography md:bg-photography bg-cover flex flex-col justify-center text-center h-600'>
+			<div className='bg-mobilePhotography md:bg-photography bg-cover bg-center flex flex-col justify-center text-center h-600'>
 				<div className='max-w-lg mx-auto mt-80'>
 					<h3 className='text-2xl md:text-3xl font-titles pb-8'>Photography</h3>
 					<p className='font-body text-sm max-w-xs'>
