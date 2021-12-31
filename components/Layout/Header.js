@@ -1,4 +1,15 @@
+import { useState } from 'react';
+import { CgClose } from 'react-icons/cg';
+
 function Header() {
+	const [navbarOpen, setNavbarOpen] = useState(false);
+	const handleToggle = () => {
+		setNavbarOpen(!navbarOpen);
+	};
+	const closeMenu = () => {
+		setNavbarOpen(false);
+	};
+
 	return (
 		<div className='bg-header-image bg-center bg-cover w-full'>
 			<div className='navbar mb-2 py-6 text-neutral-content max-w-screen-xl mx-auto '>
@@ -28,23 +39,58 @@ function Header() {
 					</div>
 				</div>
 				<div className='flex-none lg:hidden'>
-					<button className='btn btn-square btn-ghost'>
-						<svg
-							xmlns='http://www.w3.org/2000/svg'
-							fill='none'
-							viewBox='0 0 24 24'
-							className='inline-block w-6 h-6 stroke-current'
-						>
-							<path
-								strokeLinecap='round'
-								strokeLinejoin='round'
-								strokeWidth='2'
-								d='M4 6h16M4 12h16M4 18h16'
-							></path>
-						</svg>
+					<button className='btn btn-square btn-ghost' onClick={handleToggle}>
+						{navbarOpen ? (
+							<CgClose className='text-2xl' />
+						) : (
+							<svg
+								xmlns='http://www.w3.org/2000/svg'
+								fill='none'
+								viewBox='0 0 24 24'
+								className='inline-block w-6 h-6 stroke-current'
+							>
+								<path
+									strokeLinecap='round'
+									strokeLinejoin='round'
+									strokeWidth='2'
+									d='M4 6h16M4 12h16M4 18h16'
+								></path>
+							</svg>
+						)}
 					</button>
 				</div>
 			</div>
+			{navbarOpen ? (
+				<div className='fixed mx-auto left-4 right-4 justify-center max-w-md'>
+					<ul class='menu p-4 shadow-lg bg-base-100 rounded-box'>
+						<li>
+							<a className='justify-center mb-2' onClick={() => closeMenu()}>
+								About
+							</a>
+						</li>
+						<li>
+							<a className='justify-center mb-2' onClick={() => closeMenu()}>
+								Services
+							</a>
+						</li>
+						<li>
+							<a className='justify-center mb-2' onClick={() => closeMenu()}>
+								Projects
+							</a>
+						</li>
+						<li>
+							<a
+								className='btn btn-md rounded-full mx-24 px-6 border-transparent font-titles text-black text-xs bg-yellow-300 hover:bg-yellow-400 hover:border-transparent'
+								onClick={() => closeMenu()}
+							>
+								Contact
+							</a>
+						</li>
+					</ul>
+				</div>
+			) : (
+				''
+			)}
 			<div className='h-128 container mx-auto flex justify-center  mt-12 lg:mt-24 '>
 				<div className='max-w-screen-2xl'>
 					<div className='mb-5 text-center text-4xl lg:text-5xl font-titles tracking-giant lg:tracking-enormous uppercase text-white'>
