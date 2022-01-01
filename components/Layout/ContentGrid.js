@@ -46,7 +46,7 @@ function ContentGrid() {
 						className='btn-link uppercase font-titles text-black hover:no-underline'
 					>
 						Learn More
-						<div className='mx-auto -mt-1 md:absolute md:bottom-0 md:-left-1 block h-2 w-32  bg-yellow-200 hover:bg-yellow-400 opacity-50 rounded-lg -z-50 '></div>
+						<div className='mx-auto -mt-1 md:absolute md:bottom-0 md:-left-1 block h-2 w-32  bg-red-200 hover:bg-red-400 opacity-50 rounded-lg -z-50 '></div>
 					</a>
 				</div>
 			</div>
